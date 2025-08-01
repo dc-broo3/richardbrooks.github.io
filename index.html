@@ -1,0 +1,481 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Dimension by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						  <!-- <div class="logo"> -->
+							<figure style="max-width: 200px; margin: auto; border: none; box-shadow: none;">
+							<img src="images/IMG_1256.JPG" alt="Profile photo" style="width: 100%; height: auto; border: none; box-shadow: none;" />
+							</figure>
+						<!-- </div> -->
+						<div class="content">
+							<div class="inner">
+								<h1>Richard Brooks</h1>
+								<p>Astrophysics PhD at <a href="https://www.ucl.ac.uk/astrophysics/richard-brooks-phd-student">University College London</a> 
+								<p> Contact: richard.brooks.22 (at) ucl.ac.uk</p>
+							<!-- Social links -->
+							<ul class="icons">
+							<li>
+								<a href="https://www.linkedin.com/in/richard-brooks-1879a3195/" class="icon brands fa-linkedin" target="_blank">
+								<span class="label">LinkedIn</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://github.com/dc-broo3" class="icon brands fa-github" target="_blank">
+								<span class="label">GitHub</span>
+								</a>
+							</li>
+							</ul>
+							</div>
+						<nav>
+							<ul>
+								<li><a href="#about">About</a></li>
+								<li><a href="#science">Science</a></li>
+								<li><a href="#talks">Publications and Talks</a></li>
+								<!-- <li><a href="#contact">Contact</a></li> -->
+								<!--<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- About -->
+							<article id="about">
+								<h2 class="major">About</h2>
+								<p> </p>
+								<p>I am a current PhD student in the astrophysics group at
+									<a href="https://www.ucl.ac.uk/astrophysics/richard-brooks-phd-student">University College London </a>
+									supervised by Jason Sanders. I was a pre-doctoral fellow at the
+									<a href="https://www.simonsfoundation.org/flatiron/center-for-computational-astrophysics/ ">Center for Computational Astrophysics, Flatiron Institute, </a>
+									advised by Adrian Price-Whelan, Nicolas Garavito-Camargo, and Kathryn Johnston.</p>
+								<p> My research focus is on galaxy dynamics, both local to the Milky Way and in applications to external galaxies.</p>
+								<p> Away from research, I'm a passionate <strong>Newcastle United</strong> fan!
+								</p>
+							</article>
+
+						<!-- Science -->
+							<article id="science">
+								<h2 class="major">Science</h2>
+								<figure class="image main" style="max-width: 75%; margin: auto;">
+								<img src="images/lsst.png" alt="LSST Image" style="width: 100%; height: auto;" />
+								<figcaption style="text-align: center; font-size: 0.5em;">Vera C. Rubin Observatory. Credit: Bruno C. Quint</figcaption>
+								</figure>
+								</p>
+								<p style="font-size: 1.5em;"><strong>Artifical Intelligence - Simulation Based Inference</strong></p>
+								<p> Simulation Based Inference (SBI) is a technique to infer parameters of interest from some given dataset. 
+								SBI is a powerful method for estimating the parameter posterior distributions when a likelihood function cannot be explicitly defined, or is intractable from simulation. 
+								Instead, forward simulations of the model are used to generate samples of the data and parameters. 
+								This technique is also known as “Likelihood Free Inference" or “Distribution Free inference". 
+								Although these names are slightly misleading as the inference is not likelihood-free, rather we avoid explicitly defining a likelihood and instead model it using many forward simulations. 
+								SBI has been applied across many fields of research: from mathematics, to quantitative finance, to seismology. 
+								Increasingly, SBI is being used throughout astrophysics as well. 
+								Therefore, SBI is set to become an effective lingua franca for facilitating communication across many scientific disciplines. 
+								The simplest form of SBI is known as Approximate Bayesian Computation (ABC). 
+								The ABC framework selects forward simulations that are the most similar to the observed data based on some distance measure involving the summary statistics of the simulation. Another way to get the posterior is via Density Estimation Likelihood Free Inference (DELFI). In this approach, all existing forward simulations are used to learn a conditional density distribution of the data given the simulation parameters using a density estimation algorithm, e.g., normalising flows that utilise a series of transformations to convert a simple base distribution into the desired probability distribution.
+								DELFI is advantageous over the simpler ABC approach as it does not rely on a choice of a distance measure and it uses all available forward simulations to build the posterior distribution, making it far more efficient. Additionally, once a normalising flow has been trained on a precomputed simulation dataset, the posterior can be returned for many observations without having to retrain the flow. This is known as amortisation and is a benefit over more classical approaches to estimate the posterior, e.g., Markov Chain Monte Carlo, as these methods need to be re-evaluated every time a new observation becomes available. 
+								Our approach in <a href="https://arxiv.org/abs/2507.10667">(Brooks et al. 2025b) </a>  is to use SBI in order to better understand the dynamics
+								 of the MW-LMC merger. Coming soon, we will apply our SBI framework to real datasets (Brooks et al. 2025c in prep).</p>
+						
+								<p style="font-size: 1.5em;"><strong>Stellar Streams</strong></p>
+								<p> The dark matter halo of a galaxy has an abundance substructure. 
+									This substructure results from the process of accreting material from smaller satellite galaxies. 
+									Debris from the satellites is tidally stripped by the central galaxy, forming long tidal streams of stars. 
+									These structures are of interest as they reveal something about the gravitational potential of the central galaxy, 
+									and hence the underlying dark matter distribution.
+									Perturbations to the gravitational potential over time can be investigated using streams. 
+									Particularly those that pass close to the source of the perturbation. 
+									Of note is the recent major merger of the Milky Way with the Large Magellanic Cloud (LMC). 
+									Modelling tidal streams is often a complex process in phase-space coordinates. 
+									An alternative approach is to model streams in the action-angle space. 
+									By transformation to this canonical coordinate system, the actions represent constants of motion along a particle's 
+									orbit in the host galaxy's potential, while the angles determine the position of the particle through its orbit.
+									 The time-dependent nature of the Milky Way's history raises the question that these actions may not be invariant over 
+									 time as thought to be in the time-independent histories <a href="https://ui.adsabs.harvard.edu/abs/2024MNRAS.532.2657B/abstract">(Brooks et al. 2024)  </a>
+									More generally, the dynamical perturbations that the LMC induced on the population of stellar streams in the
+									 Milky Way is an exciting way to decipher properties of the LMC and the adopted dark matter model 
+									 <a href="https://ui.adsabs.harvard.edu/abs/2025ApJ...978...79B/abstract">(Brooks et al. 2025a)  </a></p>
+								<p style="font-size: 1.5em;"><strong>Galaxy Merger with the Large Magellanic Cloud</strong></p>
+								<p> LCDM cosmological models predict the shapes of dark matter haloes to be triaxial. 
+									From observations, the shapes of dark matter haloes can be very different.
+									 The evolution and properties of a galaxy are strongly influenced by merger events.
+									  Within the Local Group, the MW is undergoing a merger with the Large Magellanic Cloud (LMC).
+									   The LMC is thought to be on its first pericentric passage and has a merger ratio with the Milky Way 
+									   (MW) of ~1:8. The LMC has been observed to generate significant disequilibrium in the MW gravitational potential,
+									    e.g. displacing the MW disc, creating a stellar over-density, and generating the reflex motion of the stellar halo. 
+									Due to the merger with the LMC, the potential of the MW is unlikely to be invariant and will deform non-linearly. 
+									Basis function expansions (BFEs) act to reduce non-linear systems to linear ones by the transformation to a 
+									well-motivated choice of basis functions. As such, BFEs offer the flexibility to model the deformations 
+									of the dark matter haloes captured in N-body simulations. The MW-LMC N-body simulations of 
+									Lilleengen et al. 2023 infer a BFE description using the EXP toolkit. 
+									The harmonic orders of the BFE will develop over the entire simulation. 
+									At the beginning of the live simulation, and for all prior times, 
+									there has yet to be any response of the MW's dark matter halo due to the passage of the LMC. 
+									The in-fall of the LMC as the satellite galaxy onto the MW as the central host generates density wakes. 
+									The classical `conic' wake trailing the LMC is described as the transient response, whereas the 
+									response elsewhere in the MW halo is the collective response. In the below animation, you can see the
+									 temporal development of the MW halo density contrast due to the LMC's passage for both isolated 
+									 harmonic subsets and the full basis expansion simulation of the MW--LMC simulation.</p>
+									 <span class="image main"><img src="images/mwhalo_harmoics_devel.gif" /></span>
+								<p style="font-size: 1.5em;"><strong>Dark Matter Paradigms</strong></p>
+								<p> To this day, the fiducial Lambda Cold Dark Matter (LCDM) model still competes 
+									against alternative models that can potentially alleviate some tensions found with LCDM.
+									 A novel way to constrain dark matter models is possible through measuring the kinematic signatures of atomic 
+									 hydrogen (HI) in galaxies. The 21-cm emission line of HI gas is broadened due to a galaxy's rotation. 
+									 The extent of such broadening in a given galaxy is sensitive to the size, 
+									 and hence mass of the dark matter halo hosting the gas. 
+									 The use of HI gas a visible tracer for the dark matter distribution allows us to connect the dark universe 
+									 to measurable quantities. 
+									<a href="https://ui.adsabs.harvard.edu/abs/2022arXiv221108092B/abstract">(Brooks, Oman, & Frenk 2023) </a> </p>
+								
+								</article>
+
+						<!-- talks -->
+							<article id="talks">
+								<h2 class="major">Publications and Talks</h2>
+								<figure class="image main" style="max-width: 50%; margin: auto;">
+								<img src="images/talk.jpg" alt="LSST Image" style="width: 100%; height: auto;" />
+								<!-- <figcaption style="text-align: center; font-size: 0.5em;">Vera C. Rubin Observatory. Credit: Bruno C. Quint</figcaption> -->
+								</figure>
+								<p style="font-size: 1.5em;"><strong>Publications</strong></p>
+								<p>A complete list of my publications can be found on 
+									<a href="https://ui.adsabs.harvard.edu/search/q=orcid%3A0000-0001-5550-2057&sort=date%20desc%2C%20bibcode%20desc&p_=0">
+										 NASA ADS </a> 
+										or on <a href="https://arxiv.org/search/?searchtype=author&query=Brooks%2C+R+A+N">
+										 arxiv </a> here.
+										</p> 
+								<p style="font-size: 1.5em;"><strong>Selected Talks</strong></p>
+								<p> <ol>
+								<li>Contributed talk, IAU 403 Conference: The Hidden Beauty of the Galactic Outskirts, Córdoba, October 2025, ‘The impact of the Milky Way – Large Magellanic Cloud interaction on stellar stream populations'.</li>
+								<li>Contributed talk, National Astronomy Meeting, Durham University, July 2025, ‘Studying the Milky Way and Large Magellanic Cloud using Simulation Based Inference'.</li>
+								<li>Contributed talk, National Astronomy Meeting, Durham University, July 2025, ‘Stellar streams and disequilibrium in the Milky Way'.</li>
+								<li>Contributed talk, Milky Clouds over Yellowstone workshop, Bozeman, Montana, ‘Stellar streams and disequilibrium in the Milky Way', May 2025.</li>
+								<li>Invited talk, Center for Doctoral Training in Data Intensive Science, University College London, May 2025, ‘Studying the Milky Way and Large Magellanic Cloud using Simulation Based Inference'.</li>
+								<li>Contributed talk, Streams24 Workshop, Durham University, August 2024, ‘Stellar streams and disequilibrium in the Milky Way'.</li>
+								<li>Flash talk, Small Galaxies, Cosmic Questions II, Durham University, July 2024, ‘Stellar streams and disequilibrium in the Milky Way'.</li>
+								<li>CCA Pre-Doc Symposium, Flatiron Institute, Center for Computational Astrophysics, June 2024, ‘Stellar streams and disequilibrium in the Milky Way: The influence of the Large Magellanic Cloud'.</li>
+								<li>Invited talk, MAT talk, Massachusetts Institute of Technology, May 2024, 'Stream actions and energies in deforming Milky Way haloes'.</li>
+								<li>Invited talk, Conroy and Hernquist group meetings, Harvard University, Center for Astrophysics, March 2024, 'Stream actions and energies in deforming Milky Way haloes'.</li>
+								<li>Invited talk, Coffee talk, Institute for Advanced Study, Princeton University, March 2024, 'Stream actions and energies in deforming Milky Way haloes'.</li>
+								<li>Invited talk, Robyn Sanderson group meeting, University of Pennsylvania, March 2024, ‘Stream actions and energies in deforming Milky Way haloes'.</li>
+								<li>Invited talk, Milky Way Stars group meeting, Columbia University, March 2024, ‘Stream actions and energies in deforming Milky Way haloes'.</li>
+								<li>Contributed talk, Milky Clouds over Manhattan workshop, Flatiron Institute, Center for Computational Astrophysics, February 2024, ‘Stream actions and energies in deforming Milky Way haloes'.</li>
+								<li>Invited talk - Surrey London Astro Meeting, University of Surrey, December 2023, "Action and energy clustering of stellar streams in deforming Milky Way dark matter haloes".</li>
+								<li>Invited talk - Institute for Computational Cosmology, Durham University, April 2023, "ΛCDM survives another day: Origins of the asymmetry in the ALFALFA survey".</li>
+								<li>Poster and Flash Talk - IAUS379: Dynamical Masses of Local Group Galaxies, March 2023, "The north-south asymmetry of the ALFALFA HI velocity width function".</li>
+								<li>Invited talk - University of Helsinki, March 2023, "ΛCDM survives another day: Origins of the asymmetry in the ALFALFA survey".</li>
+								</ol>
+ 
+							</article>
+
+						<!-- Contact
+							<article id="contact">
+								<h2 class="major">Contact</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="4"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</form>
+								<ul class="icons">
+									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</article> -->
+
+						<!-- Elements -->
+							<article id="elements">
+								<h2 class="major">Elements</h2>
+
+								<section>
+									<h3 class="major">Text</h3>
+									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+									<hr />
+									<h2>Heading Level 2</h2>
+									<h3>Heading Level 3</h3>
+									<h4>Heading Level 4</h4>
+									<h5>Heading Level 5</h5>
+									<h6>Heading Level 6</h6>
+									<hr />
+									<h4>Blockquote</h4>
+									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+									<h4>Preformatted</h4>
+									<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+    print 'Iteration ' + i;
+    deck.shuffle();
+    i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+								</section>
+
+								<section>
+									<h3 class="major">Lists</h3>
+
+									<h4>Unordered</h4>
+									<ul>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Alternate</h4>
+									<ul class="alt">
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Ordered</h4>
+									<ol>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis viverra.</li>
+										<li>Felis enim feugiat.</li>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis lorem.</li>
+										<li>Felis enim et feugiat.</li>
+									</ol>
+									<h4>Icons</h4>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									</ul>
+
+									<h4>Actions</h4>
+									<ul class="actions">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+								</section>
+
+								<section>
+									<h3 class="major">Table</h3>
+									<h4>Default</h4>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+
+									<h4>Alternate</h4>
+									<div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+								</section>
+
+								<section>
+									<h3 class="major">Buttons</h3>
+									<ul class="actions">
+										<li><a href="#" class="button primary">Primary</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button">Default</a></li>
+										<li><a href="#" class="button small">Small</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+									</ul>
+									<ul class="actions">
+										<li><span class="button primary disabled">Disabled</span></li>
+										<li><span class="button disabled">Disabled</span></li>
+									</ul>
+								</section>
+
+								<section>
+									<h3 class="major">Form</h3>
+									<form method="post" action="#">
+										<div class="fields">
+											<div class="field half">
+												<label for="demo-name">Name</label>
+												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+											</div>
+											<div class="field half">
+												<label for="demo-email">Email</label>
+												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
+											</div>
+											<div class="field">
+												<label for="demo-category">Category</label>
+												<select name="demo-category" id="demo-category">
+													<option value="">-</option>
+													<option value="1">Manufacturing</option>
+													<option value="1">Shipping</option>
+													<option value="1">Administration</option>
+													<option value="1">Human Resources</option>
+												</select>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+												<label for="demo-priority-low">Low</label>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-high" name="demo-priority">
+												<label for="demo-priority-high">High</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-copy" name="demo-copy">
+												<label for="demo-copy">Email me a copy</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-human" name="demo-human" checked>
+												<label for="demo-human">Not a robot</label>
+											</div>
+											<div class="field">
+												<label for="demo-message">Message</label>
+												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+											</div>
+										</div>
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="primary" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</form>
+								</section>
+
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
