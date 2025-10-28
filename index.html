@@ -92,7 +92,13 @@
 								The ABC framework selects forward simulations that are the most similar to the observed data based on some distance measure involving the summary statistics of the simulation. Another way to get the posterior is via Density Estimation Likelihood Free Inference (DELFI). In this approach, all existing forward simulations are used to learn a conditional density distribution of the data given the simulation parameters using a density estimation algorithm, e.g., normalising flows that utilise a series of transformations to convert a simple base distribution into the desired probability distribution.
 								DELFI is advantageous over the simpler ABC approach as it does not rely on a choice of a distance measure and it uses all available forward simulations to build the posterior distribution, making it far more efficient. Additionally, once a normalising flow has been trained on a precomputed simulation dataset, the posterior can be returned for many observations without having to retrain the flow. This is known as amortisation and is a benefit over more classical approaches to estimate the posterior, e.g., Markov Chain Monte Carlo, as these methods need to be re-evaluated every time a new observation becomes available. 
 								Our approach in <a href="https://arxiv.org/abs/2507.10667">(Brooks et al. 2025b) </a>  is to use SBI in order to better understand the dynamics
-								 of the MW-LMC merger. Coming soon, we will apply our SBI framework to real datasets (Brooks et al. 2025c in prep).</p>
+								 of the MW-LMC merger. 
+								 
+							    In my latest work I have applied this SBI architecture to data from the Dark Energy Spectroscopic Instrument blue horizontal branch and H3+SEGUE+MagE red giant branch datasets to provide constraints on the MW and LMC dark matter masses, and the reflex motion 
+								<a href="https://arxiv.org/abs/2510.04735">(Brooks et al. 2025c) </a>.
+								For the H3+SEGUE+MagE data, I found that the total mass of the LMC must be at least 10% of the Milky Way's total mass.
+								This framework allows us to explore the effects of survey sky coverage and the availability of velocity information for stars in the outer halo on parameter constraints.
+								Given these vary between surveys, this flexible and reliable SBI technique will be highly consequential to constrain the dark matter content of the MW and LMC, plus the reflex velocity, given the upcoming influx of outer halo datasets. </p>
 						
 								<p style="font-size: 1.5em;"><strong>Stellar Streams</strong></p>
 								<p> The dark matter halo of a galaxy has an abundance substructure. 
@@ -163,7 +169,7 @@
 										</p> 
 								<p style="font-size: 1.5em;"><strong>Selected Talks</strong></p>
 								<p> <ol>
-								<li>Invited talk, Thunch Talk, Princeton University, October 2025, ‘Measuring the Dynamics of the MW--LMC Interaction with Simulation-Based Inference'.</li>	
+								<li>Invited talk, Galaxies group meeting, Columbia University, October 2025, ‘Measuring the Dynamics of the MW--LMC Interaction with Simulation-Based Inference'.</li>	
 								<li>Invited talk, Institute for Theory and Computation Luncheon Talk, Harvard University, Center for Astrophysics, October 2025, ‘Measuring the Dynamics of the MW--LMC Interaction with Simulation-Based Inference'.</li>
 								<li>Contributed talk, IAU 403 Conference: The Hidden Beauty of the Galactic Outskirts, Córdoba, October 2025, ‘The impact of the Milky Way – Large Magellanic Cloud interaction on stellar stream populations'.</li>
 								<li>Contributed talk, National Astronomy Meeting, Durham University, July 2025, ‘Studying the Milky Way and Large Magellanic Cloud using Simulation Based Inference'.</li>
