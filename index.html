@@ -79,7 +79,7 @@
 								<figcaption style="text-align: center; font-size: 0.5em;">Vera C. Rubin Observatory. Credit: Bruno C. Quint</figcaption>
 								</figure>
 								</p>
-								<p style="font-size: 1.5em;"><strong>Artifical Intelligence - Simulation Based Inference</strong></p>
+								<p style="font-size: 1.5em;"><strong>Simulation Based Inference</strong></p>
 								<p> Simulation Based Inference (SBI) is a technique to infer parameters of interest from some given dataset. 
 								SBI is a powerful method for estimating the parameter posterior distributions when a likelihood function cannot be explicitly defined, or is intractable from simulation. 
 								Instead, forward simulations of the model are used to generate samples of the data and parameters. 
@@ -92,7 +92,7 @@
 								The ABC framework selects forward simulations that are the most similar to the observed data based on some distance measure involving the summary statistics of the simulation. Another way to get the posterior is via Density Estimation Likelihood Free Inference (DELFI). In this approach, all existing forward simulations are used to learn a conditional density distribution of the data given the simulation parameters using a density estimation algorithm, e.g., normalising flows that utilise a series of transformations to convert a simple base distribution into the desired probability distribution.
 								DELFI is advantageous over the simpler ABC approach as it does not rely on a choice of a distance measure and it uses all available forward simulations to build the posterior distribution, making it far more efficient. Additionally, once a normalising flow has been trained on a precomputed simulation dataset, the posterior can be returned for many observations without having to retrain the flow. This is known as amortisation and is a benefit over more classical approaches to estimate the posterior, e.g., Markov Chain Monte Carlo, as these methods need to be re-evaluated every time a new observation becomes available. 
 								Our approach in <a href="https://arxiv.org/abs/2507.10667">(Brooks et al. 2025b) </a>  is to use SBI in order to better understand the dynamics
-								 of the MW-LMC merger. 
+								 of the MW-LMC merger. </p>
 								 
 							    In my latest work I have applied this SBI architecture to data from the Dark Energy Spectroscopic Instrument blue horizontal branch and H3+SEGUE+MagE red giant branch datasets to provide constraints on the MW and LMC dark matter masses, and the reflex motion 
 								<a href="https://arxiv.org/abs/2510.04735">(Brooks et al. 2025c) </a>.
