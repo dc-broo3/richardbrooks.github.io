@@ -1,0 +1,133 @@
+/*
+	Site theme: LaTeX-style typography (Computer Modern) and gold accents.
+	Loaded after main.css and mindmap.css; remove the <link> to revert to the template look.
+*/
+
+@import url("https://cdn.jsdelivr.net/npm/computer-modern@0.1.3/cmu-serif.css");
+
+:root {
+	--gold: #e2b65c;
+	--gold-soft: rgba(226, 182, 92, 0.55);
+	--serif: "CMU Serif", "Latin Modern Roman", "Computer Modern", Georgia, "Times New Roman", serif;
+}
+
+/* Typography */
+
+body, input, select, textarea, button, .button {
+	font-family: var(--serif);
+}
+
+body {
+	font-size: 1.05rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--serif);
+	font-weight: 700;
+	text-transform: none;
+	font-variant: small-caps;
+	letter-spacing: 0.06em;
+	color: var(--gold);
+}
+
+h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
+	border-bottom-color: var(--gold-soft);
+}
+
+/* Landing card: small caps instead of wide uppercase tracking. */
+#header h1 {
+	color: var(--gold);
+	letter-spacing: 0.08em;
+}
+
+#header .content p {
+	text-transform: none;
+	font-variant: small-caps;
+	letter-spacing: 0.08em;
+	font-size: 1rem;
+}
+
+#header nav ul li a {
+	text-transform: none;
+	font-variant: small-caps;
+	letter-spacing: 0.12em;
+	font-size: 1.05rem;
+}
+
+/* Science / Publications and Talks */
+
+#main .mindmap-hint {
+	font-style: italic;
+	letter-spacing: 0.02em;
+	font-size: 0.95rem;
+}
+
+#main .mindmap .hub {
+	text-transform: none;
+	font-variant: small-caps;
+	letter-spacing: 0.08em;
+	font-size: clamp(0.75rem, 3.4cqw, 1.15rem);
+}
+
+#main .mindmap .node {
+	font-size: clamp(0.7rem, 2.8cqw, 0.95rem);
+	line-height: 1.2;
+}
+
+	#main .mindmap .node.soon .title {
+		font-size: 0.92em;
+	}
+
+	#main .mindmap .node .icon {
+		color: var(--gold);
+	}
+
+	#main .mindmap .node .count {
+		text-transform: none;
+		font-variant: small-caps;
+		letter-spacing: 0.06em;
+		font-size: 0.85em;
+	}
+
+	#main .mindmap .node:hover,
+	#main .mindmap .node:focus-visible {
+		box-shadow: inset 0 0 0 2px var(--gold), 0 0 2rem rgba(226, 182, 92, 0.3);
+	}
+
+	#main .mindmap .node[aria-expanded="true"] {
+		background-color: var(--gold);
+		box-shadow: 0 0 2.5rem rgba(226, 182, 92, 0.5);
+	}
+
+		#main .mindmap .node[aria-expanded="true"] .icon {
+			color: #1b1f22;
+		}
+
+#main .topic .pubs-count {
+	text-transform: none;
+	font-variant: small-caps;
+	letter-spacing: 0.06em;
+	font-size: 0.95rem;
+}
+
+#main .pubs {
+	border-left-color: var(--gold-soft);
+}
+
+	#main .pubs span {
+		font-size: 0.88rem;
+	}
+
+/* News */
+
+#about .news {
+	border-color: var(--gold-soft);
+}
+
+	#about .news .news-date {
+		color: var(--gold);
+		text-transform: none;
+		font-variant: small-caps;
+		letter-spacing: 0.06em;
+		font-size: 0.95rem;
+	}
