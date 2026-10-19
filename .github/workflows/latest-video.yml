@@ -1,0 +1,48 @@
+# Keeps the "Latest Video" embed in the Outreach section pointing at the newest
+# upload on the YouTube channel. Runs on the 1st and 15th of each month, and can
+# be run by hand from the Actions tab ("Run workflow").
+name: Update latest YouTube video
+
+on:
+  schedule:
+    - cron: '0 9 1,15 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  CHANNEL_ID: UCg1zX1nZeEkF2tyTklb65GA
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Find newest upload
+        id: latest
+        run: |
+          id=$(curl -fsSL "https://www.youtube.com/feeds/videos.xml?channel_id=${CHANNEL_ID}" \
+            | grep -o '<yt:videoId>[^<]*' | head -n 1 | sed 's/<yt:videoId>//')
+          if ! [[ "$id" =~ ^[A-Za-z0-9_-]{11}$ ]]; then
+            echo "Could not read a video ID from the channel feed (got: '$id')" >&2
+            exit 1
+          fi
+          echo "Newest upload: $id"
+          echo "id=$id" >> "$GITHUB_OUTPUT"
+
+      - name: Update embed in index.html
+        run: |
+          sed -i -E "s|(youtube\.com/embed/)[A-Za-z0-9_-]{11}|\1${{ steps.latest.outputs.id }}|" index.html
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet; then
+            echo "Already showing the newest video."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Update latest YouTube video to ${{ steps.latest.outputs.id }}"
+          git push
