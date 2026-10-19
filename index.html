@@ -108,22 +108,30 @@
 								<h2 class="major">Science</h2>
 								<p class="mindmap-hint">Click a bubble to explore each area of my research.</p>
 								<div class="mindmap" role="group" aria-label="Research topics">
-									<svg class="links" viewBox="0 0 100 80" aria-hidden="true">
-										<path class="rel" d="M20 17 H80 V63 H20 Z" />
-										<line class="spoke" x1="50" y1="40" x2="20" y2="17" />
-										<line class="spoke" x1="50" y1="40" x2="80" y2="17" />
-										<line class="spoke" x1="50" y1="40" x2="20" y2="63" />
-										<line class="spoke" x1="50" y1="40" x2="80" y2="63" />
+									<svg class="links" viewBox="0 0 100 90" aria-hidden="true">
+										<path class="rel" d="M50 14 L81.4 35.4 L69.4 70.1 L30.6 70.1 L18.6 35.4 Z" />
+										<line class="spoke" x1="50" y1="45" x2="50" y2="14" />
+										<line class="spoke" x1="50" y1="45" x2="81.4" y2="35.4" />
+										<line class="spoke" x1="50" y1="45" x2="69.4" y2="70.1" />
+										<line class="spoke" x1="50" y1="45" x2="30.6" y2="70.1" />
+										<line class="spoke" x1="50" y1="45" x2="18.6" y2="35.4" />
 									</svg>
 									<div class="hub"><span>My<br />Research</span></div>
-									<button type="button" class="node" style="--x: 20%; --y: 21.25%; --d: -0s;" aria-expanded="false" aria-controls="topic-sbi"><span class="icon solid fa-project-diagram" aria-hidden="true"></span><span class="title">Simulation Based Inference</span></button>
-									<button type="button" class="node" style="--x: 80%; --y: 21.25%; --d: -1.5s;" aria-expanded="false" aria-controls="topic-streams"><span class="icon solid fa-wave-square" aria-hidden="true"></span><span class="title">Stellar Streams</span></button>
-									<button type="button" class="node" style="--x: 20%; --y: 78.75%; --d: -3s;" aria-expanded="false" aria-controls="topic-lmc"><span class="icon solid fa-meteor" aria-hidden="true"></span><span class="title">The MW&ndash;LMC Merger</span></button>
-									<button type="button" class="node" style="--x: 80%; --y: 78.75%; --d: -4.5s;" aria-expanded="false" aria-controls="topic-dm"><span class="icon solid fa-atom" aria-hidden="true"></span><span class="title">Dark Matter Paradigms</span></button>
+									<button type="button" class="node" style="--x: 50%; --y: 15.6%; --d: 0s;" aria-expanded="false" aria-controls="topic-sbi"><span class="icon solid fa-project-diagram" aria-hidden="true"></span><span class="title">Simulation Based Inference</span><span class="count">3 papers</span></button>
+									<button type="button" class="node" style="--x: 81.4%; --y: 39.3%; --d: -1.2s;" aria-expanded="false" aria-controls="topic-streams"><span class="icon solid fa-wave-square" aria-hidden="true"></span><span class="title">Stellar Streams</span><span class="count">2 papers</span></button>
+									<button type="button" class="node" style="--x: 69.4%; --y: 77.9%; --d: -2.4s;" aria-expanded="false" aria-controls="topic-dm"><span class="icon solid fa-atom" aria-hidden="true"></span><span class="title">Dark Matter Paradigms</span><span class="count">2 papers</span></button>
+									<button type="button" class="node soon" style="--x: 30.6%; --y: 77.9%; --d: -3.6s;" aria-expanded="false" aria-controls="topic-gce"><span class="icon solid fa-flask" aria-hidden="true"></span><span class="title">Galactic Chemical Evolution Models</span><span class="count">Coming soon</span></button>
+									<button type="button" class="node" style="--x: 18.6%; --y: 39.3%; --d: -4.8s;" aria-expanded="false" aria-controls="topic-lmc"><span class="icon solid fa-meteor" aria-hidden="true"></span><span class="title">The MW&ndash;LMC Merger</span><span class="count">5 papers</span></button>
 								</div>
 
 								<div class="topic" id="topic-sbi" role="region" aria-label="Simulation Based Inference">
 									<h3>Simulation Based Inference</h3>
+									<p class="pubs-count">3 related publications</p>
+									<ul class="pubs">
+										<li><a href="https://doi.org/10.1093/mnras/stag1254" target="_blank">The Milky Way&ndash;Large Magellanic Cloud interaction with simulation-based inference</a><span>Brooks et al. 2026b &middot; MNRAS 550, stag1254</span></li>
+										<li><a href="https://doi.org/10.1093/mnras/stag926" target="_blank">Quantifying the Milky Way, LMC and their interaction using all-sky kinematics of outer halo stars</a><span>Brooks et al. 2026a &middot; MNRAS 549, stag926</span></li>
+										<li><a href="https://doi.org/10.1093/mnras/staf2111" target="_blank">A simulation-based inference approach to the dynamics of the MW&ndash;LMC system &mdash; validation</a><span>Brooks et al. 2025b &middot; MNRAS 545, staf2111</span></li>
+									</ul>
 									<p> Simulation Based Inference (SBI) is a technique to infer parameters of interest from some given dataset. 
 									SBI is a powerful method for estimating the parameter posterior distributions when a likelihood function cannot be explicitly defined, or is intractable from simulation. 
 									Instead, forward simulations of the model are used to generate samples of the data and parameters. 
@@ -135,11 +143,11 @@
 									The simplest form of SBI is known as Approximate Bayesian Computation (ABC). 
 									The ABC framework selects forward simulations that are the most similar to the observed data based on some distance measure involving the summary statistics of the simulation. Another way to get the posterior is via Density Estimation Likelihood Free Inference (DELFI). In this approach, all existing forward simulations are used to learn a conditional density distribution of the data given the simulation parameters using a density estimation algorithm, e.g., normalising flows that utilise a series of transformations to convert a simple base distribution into the desired probability distribution.
 									DELFI is advantageous over the simpler ABC approach as it does not rely on a choice of a distance measure and it uses all available forward simulations to build the posterior distribution, making it far more efficient. Additionally, once a normalising flow has been trained on a precomputed simulation dataset, the posterior can be returned for many observations without having to retrain the flow. This is known as amortisation and is a benefit over more classical approaches to estimate the posterior, e.g., Markov Chain Monte Carlo, as these methods need to be re-evaluated every time a new observation becomes available. 
-									Our approach in <a href="https://arxiv.org/abs/2507.10667">(Brooks et al. 2025b) </a>  is to use SBI in order to better understand the dynamics
+									Our approach in <a href="https://doi.org/10.1093/mnras/staf2111">(Brooks et al. 2025b)</a>  is to use SBI in order to better understand the dynamics
 									 of the MW-LMC merger. </p>
 								 
 								    <p>In my latest work I have applied this SBI architecture to data from the Dark Energy Spectroscopic Instrument blue horizontal branch and H3+SEGUE+MagE red giant branch datasets to provide constraints on the MW and LMC dark matter masses, and the reflex motion 
-									<a href="https://arxiv.org/abs/2510.04735">(Brooks et al. 2025c) </a>.
+									<a href="https://doi.org/10.1093/mnras/stag1254">(Brooks et al. 2026b)</a>.
 									For the H3+SEGUE+MagE data, I found that the total mass of the LMC must be at least 10% of the Milky Way's total mass.
 									This framework allows us to explore the effects of survey sky coverage and the availability of velocity information for stars in the outer halo on parameter constraints.
 									Given these vary between surveys, this flexible and reliable SBI technique will be highly consequential to constrain the dark matter content of the MW and LMC, plus the reflex velocity, given the upcoming influx of outer halo datasets. </p>
@@ -148,6 +156,11 @@
 
 								<div class="topic" id="topic-streams" role="region" aria-label="Stellar Streams">
 									<h3>Stellar Streams</h3>
+									<p class="pubs-count">2 related publications</p>
+									<ul class="pubs">
+										<li><a href="https://doi.org/10.3847/1538-4357/ad93a7" target="_blank">LMC Calls, Milky Way Halo Answers: Disentangling the Effects of the MW&ndash;LMC Interaction on Stellar Stream Populations</a><span>Brooks et al. 2025a &middot; ApJ 978, 79</span></li>
+										<li><a href="https://doi.org/10.1093/mnras/stae1565" target="_blank">Action and energy clustering of stellar streams in deforming Milky Way dark matter haloes</a><span>Brooks et al. 2024 &middot; MNRAS 532, 2657</span></li>
+									</ul>
 									<p> The dark matter halo of a galaxy has an abundance of substructure. 
 										This substructure results from the process of accreting material from smaller satellite galaxies. 
 										Debris from the satellites is tidally stripped by the central galaxy, forming long tidal streams of stars. 
@@ -161,15 +174,23 @@
 										By transformation to this canonical coordinate system, the actions represent constants of motion along a particle's 
 										orbit in the host galaxy's potential, while the angles determine the position of the particle through its orbit.
 										 The time-dependent nature of the Milky Way's history raises the question that these actions may not be invariant over 
-										 time as thought to be in the time-independent histories <a href="https://ui.adsabs.harvard.edu/abs/2024MNRAS.532.2657B/abstract">(Brooks et al. 2024)  </a>
+										 time as thought to be in the time-independent histories <a href="https://doi.org/10.1093/mnras/stae1565">(Brooks et al. 2024)</a>
 										More generally, the dynamical perturbations that the LMC induced on the population of stellar streams in the
 										 Milky Way is an exciting way to decipher properties of the LMC and the adopted dark matter model 
-										 <a href="https://ui.adsabs.harvard.edu/abs/2025ApJ...978...79B/abstract">(Brooks et al. 2025a)  </a></p>
+										 <a href="https://doi.org/10.3847/1538-4357/ad93a7">(Brooks et al. 2025a)</a></p>
 									<button type="button" class="back-to-map">&uarr; Back to the map</button>
 								</div>
 
 								<div class="topic" id="topic-lmc" role="region" aria-label="Galaxy Merger with the Large Magellanic Cloud">
 									<h3>Galaxy Merger with the Large Magellanic Cloud</h3>
+									<p class="pubs-count">5 related publications</p>
+									<ul class="pubs">
+										<li><a href="https://doi.org/10.1093/mnras/stag1254" target="_blank">The Milky Way&ndash;Large Magellanic Cloud interaction with simulation-based inference</a><span>Brooks et al. 2026b &middot; MNRAS 550, stag1254</span></li>
+										<li><a href="https://doi.org/10.1093/mnras/stag926" target="_blank">Quantifying the Milky Way, LMC and their interaction using all-sky kinematics of outer halo stars</a><span>Brooks et al. 2026a &middot; MNRAS 549, stag926</span></li>
+										<li><a href="https://doi.org/10.1093/mnras/staf2111" target="_blank">A simulation-based inference approach to the dynamics of the MW&ndash;LMC system &mdash; validation</a><span>Brooks et al. 2025b &middot; MNRAS 545, staf2111</span></li>
+										<li><a href="https://doi.org/10.3847/1538-4357/ad93a7" target="_blank">LMC Calls, Milky Way Halo Answers: Disentangling the Effects of the MW&ndash;LMC Interaction on Stellar Stream Populations</a><span>Brooks et al. 2025a &middot; ApJ 978, 79</span></li>
+										<li><a href="https://doi.org/10.1093/mnras/stae1565" target="_blank">Action and energy clustering of stellar streams in deforming Milky Way dark matter haloes</a><span>Brooks et al. 2024 &middot; MNRAS 532, 2657</span></li>
+									</ul>
 									<p> LCDM cosmological models predict the shapes of dark matter haloes to be triaxial. 
 										From observations, the shapes of dark matter haloes can be very different.
 										 The evolution and properties of a galaxy are strongly influenced by merger events.
@@ -196,6 +217,11 @@
 
 								<div class="topic" id="topic-dm" role="region" aria-label="Dark Matter Paradigms">
 									<h3>Dark Matter Paradigms</h3>
+									<p class="pubs-count">2 related publications</p>
+									<ul class="pubs">
+										<li><a href="https://doi.org/10.1093/mnras/stad1191" target="_blank">The north&ndash;south asymmetry of the ALFALFA HI velocity width function</a><span>Brooks, Oman &amp; Frenk 2023a &middot; MNRAS 522, 4043</span></li>
+										<li><a href="https://doi.org/10.1017/S1743921323001345" target="_blank">Origins of the north&ndash;south asymmetry in the ALFALFA HI velocity width function</a><span>Brooks, Oman &amp; Frenk 2023b &middot; Proc. IAU 19 (IAUS 379), 324</span></li>
+									</ul>
 									<p> To this day, the fiducial Lambda Cold Dark Matter (LCDM) model still competes 
 										against alternative models that can potentially alleviate some tensions found with LCDM.
 										 A novel way to constrain dark matter models is possible through measuring the kinematic signatures of atomic 
@@ -204,7 +230,13 @@
 										 and hence mass of the dark matter halo hosting the gas. 
 										 The use of HI gas as a visible tracer for the dark matter distribution allows us to connect the dark universe 
 										 to measurable quantities. 
-										<a href="https://ui.adsabs.harvard.edu/abs/2022arXiv221108092B/abstract">(Brooks, Oman, & Frenk 2023) </a> </p>
+										<a href="https://doi.org/10.1093/mnras/stad1191">(Brooks, Oman &amp; Frenk 2023a)</a> </p>
+									<button type="button" class="back-to-map">&uarr; Back to the map</button>
+								</div>
+
+								<div class="topic" id="topic-gce" role="region" aria-label="Galactic Chemical Evolution Models">
+									<h3>Galactic Chemical Evolution Models</h3>
+									<p>Coming soon!</p>
 									<button type="button" class="back-to-map">&uarr; Back to the map</button>
 								</div>
 

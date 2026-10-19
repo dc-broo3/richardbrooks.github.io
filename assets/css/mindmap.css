@@ -11,7 +11,7 @@
 #science .mindmap {
 	position: relative;
 	width: 100%;
-	aspect-ratio: 100 / 80;
+	aspect-ratio: 100 / 90;
 	margin: 0 0 2rem 0;
 	container-type: inline-size;
 }
@@ -57,7 +57,7 @@
 	#science .mindmap .hub {
 		left: 50%;
 		top: 50%;
-		width: 24%;
+		width: 21%;
 		background: rgba(255, 255, 255, 0.95);
 		color: #1b1f22;
 		font-size: clamp(0.65rem, 3cqw, 1rem);
@@ -72,9 +72,9 @@
 	#science .mindmap .node {
 		left: var(--x);
 		top: var(--y);
-		width: 31%;
+		width: 27%;
 		height: auto;
-		padding: 0 4%;
+		padding: 0 2%;
 		line-height: 1.25;
 		white-space: normal;
 		text-transform: none;
@@ -86,6 +86,20 @@
 		animation-delay: var(--d, 0s);
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, scale 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 	}
+
+		#science .mindmap .node .count {
+			margin-top: 0.5em;
+			font-size: 0.75em;
+			letter-spacing: 0.08rem;
+			text-transform: uppercase;
+			opacity: 0.7;
+		}
+
+		#science .mindmap .node.soon {
+			background-color: rgba(27, 31, 34, 0.6);
+			box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.4);
+			border: 1px dashed rgba(255, 255, 255, 0.7);
+		}
 
 		#science .mindmap .node .icon {
 			font-size: 1.6em;
@@ -115,6 +129,42 @@
 		display: none;
 	}
 
+	#science .topic .pubs-count {
+		margin: -0.5rem 0 0.75rem 0;
+		font-size: 0.8rem;
+		letter-spacing: 0.15rem;
+		text-transform: uppercase;
+		opacity: 0.75;
+	}
+
+	#science .topic .pubs {
+		list-style: none;
+		padding: 0 0 0 1rem;
+		margin: 0 0 2rem 0;
+		border-left: solid 2px rgba(255, 255, 255, 0.5);
+	}
+
+		#science .topic .pubs li {
+			padding-left: 0;
+			margin-bottom: 0.75rem;
+			line-height: 1.5;
+		}
+
+		#science .topic .pubs a {
+			border-bottom: none;
+			font-weight: 600;
+		}
+
+			#science .topic .pubs a:hover {
+				border-bottom: dotted 1px;
+			}
+
+		#science .topic .pubs span {
+			display: block;
+			font-size: 0.8rem;
+			opacity: 0.7;
+		}
+
 	#science .topic .back-to-map {
 		margin: 0 0 2rem 0;
 	}
@@ -136,8 +186,18 @@
 @media screen and (max-width: 480px) {
 
 	#science .mindmap .node {
-		width: 36%;
+		width: 30%;
+		padding: 0 2%;
 	}
+
+		#science .mindmap .node .icon {
+			font-size: 1.3em;
+			margin-bottom: 0.3em;
+		}
+
+		#science .mindmap .node .count {
+			display: none;
+		}
 
 }
 
