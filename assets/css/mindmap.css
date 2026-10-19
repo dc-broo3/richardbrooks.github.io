@@ -137,36 +137,59 @@
 		opacity: 0.75;
 	}
 
-	#science .topic .pubs {
-		list-style: none;
-		padding: 0 0 0 1rem;
-		margin: 0 0 2rem 0;
-		border-left: solid 2px rgba(255, 255, 255, 0.5);
-	}
-
-		#science .topic .pubs li {
-			padding-left: 0;
-			margin-bottom: 0.75rem;
-			line-height: 1.5;
-		}
-
-		#science .topic .pubs a {
-			border-bottom: none;
-			font-weight: 600;
-		}
-
-			#science .topic .pubs a:hover {
-				border-bottom: dotted 1px;
-			}
-
-		#science .topic .pubs span {
-			display: block;
-			font-size: 0.8rem;
-			opacity: 0.7;
-		}
-
 	#science .topic .back-to-map {
 		margin: 0 0 2rem 0;
+	}
+
+/* Publication lists, shared by the Science panels and the Publications section. */
+
+#main .pubs-year {
+	margin: 1.5rem 0 0.75rem 0;
+}
+
+#main .pubs {
+	list-style: none;
+	padding: 0 0 0 1rem;
+	margin: 0 0 2rem 0;
+	border-left: solid 2px rgba(255, 255, 255, 0.5);
+}
+
+	#main .pubs li {
+		padding-left: 0;
+		margin-bottom: 1.25rem;
+	}
+
+		#main .pubs li:last-child {
+			margin-bottom: 0;
+		}
+
+	#main .pubs a {
+		display: block;
+		margin-bottom: 0.35rem;
+		line-height: 1.4;
+		border-bottom: none;
+		font-weight: 600;
+	}
+
+		#main .pubs a:hover {
+			border-bottom: dotted 1px;
+		}
+
+	#main .pubs span {
+		display: block;
+		font-size: 0.8rem;
+		line-height: 1.5;
+		color: rgba(255, 255, 255, 0.7);
+	}
+
+		#main .pubs span + span {
+			margin-top: 0.1rem;
+			font-style: italic;
+		}
+
+	#main .pubs .me {
+		color: #ffffff;
+		font-weight: 600;
 	}
 
 @keyframes mindmap-float {
