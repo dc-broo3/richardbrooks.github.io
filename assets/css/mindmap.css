@@ -1,0 +1,152 @@
+/* Science mind map: bubbles around a hub; clicking one opens its topic panel below. */
+
+#science .mindmap-hint {
+	text-align: center;
+	font-size: 0.8rem;
+	letter-spacing: 0.1rem;
+	opacity: 0.75;
+	margin: 0 0 1rem 0;
+}
+
+#science .mindmap {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 100 / 80;
+	margin: 0 0 2rem 0;
+	container-type: inline-size;
+}
+
+	#science .mindmap .links {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		overflow: visible;
+	}
+
+		#science .mindmap .links line,
+		#science .mindmap .links path {
+			fill: none;
+			stroke: rgba(255, 255, 255, 0.55);
+			stroke-width: 0.35;
+		}
+
+		#science .mindmap .links .spoke {
+			stroke-dasharray: 1.2 1.2;
+			animation: mindmap-flow 6s linear infinite;
+		}
+
+		#science .mindmap .links .rel {
+			stroke: rgba(255, 255, 255, 0.2);
+			stroke-dasharray: 0.4 1.6;
+		}
+
+	#science .mindmap .hub,
+	#science .mindmap .node {
+		position: absolute;
+		translate: -50% -50%;
+		aspect-ratio: 1;
+		border-radius: 50%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+
+	#science .mindmap .hub {
+		left: 50%;
+		top: 50%;
+		width: 24%;
+		background: rgba(255, 255, 255, 0.95);
+		color: #1b1f22;
+		font-size: clamp(0.65rem, 3cqw, 1rem);
+		font-weight: 600;
+		letter-spacing: 0.15rem;
+		line-height: 1.3;
+		text-transform: uppercase;
+		box-shadow: 0 0 2.5rem rgba(255, 255, 255, 0.25);
+	}
+
+	/* Overrides the template's generic button styling. */
+	#science .mindmap .node {
+		left: var(--x);
+		top: var(--y);
+		width: 31%;
+		height: auto;
+		padding: 0 4%;
+		line-height: 1.25;
+		white-space: normal;
+		text-transform: none;
+		letter-spacing: 0.03rem;
+		font-size: clamp(0.6rem, 2.7cqw, 0.9rem);
+		background-color: rgba(27, 31, 34, 0.9);
+		box-shadow: inset 0 0 0 1px #ffffff, 0 0 1.5rem rgba(0, 0, 0, 0.4);
+		animation: mindmap-float 6s ease-in-out infinite;
+		animation-delay: var(--d, 0s);
+		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, scale 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+	}
+
+		#science .mindmap .node .icon {
+			font-size: 1.6em;
+			margin-bottom: 0.45em;
+			opacity: 0.85;
+		}
+
+		#science .mindmap .node:hover,
+		#science .mindmap .node:focus-visible {
+			background-color: rgba(60, 66, 72, 0.95);
+			scale: 1.07;
+			box-shadow: inset 0 0 0 2px #ffffff, 0 0 2rem rgba(255, 255, 255, 0.25);
+		}
+
+		#science .mindmap .node[aria-expanded="true"] {
+			background-color: #ffffff;
+			color: #1b1f22 !important;
+			box-shadow: 0 0 2.5rem rgba(255, 255, 255, 0.45);
+		}
+
+#science .topic {
+	animation: mindmap-reveal 0.35s ease-out;
+	scroll-margin-top: 2rem;
+}
+
+	#science .topic[hidden] {
+		display: none;
+	}
+
+	#science .topic .back-to-map {
+		margin: 0 0 2rem 0;
+	}
+
+@keyframes mindmap-float {
+	0%, 100% { transform: translateY(0); }
+	50% { transform: translateY(-4px); }
+}
+
+@keyframes mindmap-flow {
+	to { stroke-dashoffset: -24; }
+}
+
+@keyframes mindmap-reveal {
+	from { opacity: 0; transform: translateY(0.75rem); }
+	to { opacity: 1; transform: none; }
+}
+
+@media screen and (max-width: 480px) {
+
+	#science .mindmap .node {
+		width: 36%;
+	}
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	#science .mindmap .node,
+	#science .mindmap .links .spoke,
+	#science .topic {
+		animation: none;
+	}
+
+}
