@@ -1368,6 +1368,17 @@ input, select, textarea {
 					border-left: 0;
 				}
 
+				#header nav ul.equal {
+					display: grid;
+					grid-auto-flow: column;
+					grid-auto-columns: 1fr;
+				}
+
+					#header nav ul.equal li a {
+						padding: 0 1.25rem;
+						text-align: center;
+					}
+
 				#header nav ul li a {
 					display: block;
 					min-width: 7.5rem;
@@ -1499,6 +1510,10 @@ input, select, textarea {
 						#header nav ul li:first-child {
 							border-top: 0;
 						}
+
+					#header nav ul.equal {
+						grid-auto-flow: row;
+					}
 
 						#header nav ul li a {
 							height: 3rem;
