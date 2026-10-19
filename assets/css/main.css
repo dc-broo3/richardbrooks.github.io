@@ -161,6 +161,18 @@ input, select, textarea {
 			border-bottom-color: transparent;
 		}
 
+	/* Text links in the content are an obvious blue (menu, icons and buttons keep their own styles). */
+	#header .content p a,
+	#main article a:not(.button) {
+		color: #6cb6ff;
+		border-bottom-color: rgba(108, 182, 255, 0.5);
+	}
+
+		#header .content p a:hover,
+		#main article a:not(.button):hover {
+			color: #a5d2ff;
+		}
+
 	strong, b {
 		color: #ffffff;
 		font-weight: 600;
