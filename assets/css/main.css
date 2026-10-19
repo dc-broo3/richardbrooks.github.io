@@ -1396,6 +1396,18 @@ input, select, textarea {
 
 				}
 
+				@media screen and (max-width: 480px) {
+
+					#outreach .actions .button {
+						height: auto;
+						line-height: 1.5;
+						padding: 0.85rem 1rem;
+						white-space: normal;
+						letter-spacing: 0.1rem;
+					}
+
+				}
+
 				#outreach .video {
 					position: relative;
 					width: 100%;

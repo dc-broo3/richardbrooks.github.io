@@ -1,14 +1,9 @@
 /*
-	Science mind map: clicking a bubble shows its topic panel and hides the others.
-	Panels stay visible if JavaScript is unavailable.
+	Mind maps (Science, Publications and Talks): clicking a bubble shows its topic
+	panel and hides the others. Panels stay visible if JavaScript is unavailable.
 */
 
-(function() {
-
-	var map = document.querySelector('#science .mindmap');
-
-	if (!map)
-		return;
+Array.prototype.forEach.call(document.querySelectorAll('#main .mindmap'), function(map) {
 
 	var nodes = Array.prototype.slice.call(map.querySelectorAll('.node')),
 		topics = nodes.map(function(node) {
@@ -43,4 +38,4 @@
 		});
 	});
 
-})();
+});
