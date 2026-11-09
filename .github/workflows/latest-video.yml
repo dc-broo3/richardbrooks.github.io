@@ -1,11 +1,11 @@
 # Keeps the "Latest Video" embed in the Outreach section pointing at the newest
-# upload on the YouTube channel. Runs on the 1st and 15th of each month, and can
-# be run by hand from the Actions tab ("Run workflow").
+# upload on the YouTube channel. Runs every Monday at 09:00 UTC, and can be run
+# by hand from the Actions tab ("Run workflow").
 name: Update latest YouTube video
 
 on:
   schedule:
-    - cron: '0 9 1,15 * *'
+    - cron: '0 9 * * 1'
   workflow_dispatch:
 
 permissions:
